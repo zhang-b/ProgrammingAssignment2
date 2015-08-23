@@ -1,9 +1,9 @@
-## The two functions solve and cashe the inverse of a matrix
+## The two functions solve and cache the inverse of a matrix
 ## to avoid potential repeating inversion of the same matrix
 
 ## The function creates a list of four functions
 ## to set and get a matrix x and its inverse x_inv
-## with NULL value indicating a matrix not cashed.
+## with NULL value indicating a matrix not cached.
 
 makeCacheMatrix <- function(x = matrix()) {
         x_inv <- NULL
@@ -19,14 +19,14 @@ makeCacheMatrix <- function(x = matrix()) {
 }
 
 
-## The function gets the cashed inverse, when there is one,
+## The function gets the cached inverse, when there is one,
 ## of a matrix x; otherwise, it solves for the inverse.
 
 cacheSolve <- function(x, ...) {
         ## Return a matrix that is the inverse of 'x'
         x_inv <- x$getinv()
         if(!is.null(x_inv)){
-                message("getting cashed data")
+                message("getting cached data")
                 return(x_inv)
         }
         data <- x$get()
